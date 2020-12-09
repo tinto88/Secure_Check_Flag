@@ -1,0 +1,196 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- <div class="d-flex justify-content-center p-3">
+        <h2>Flag Check List</h2>
+    </div> -->
+    <div class="screenContainer container">
+        <div class="row">
+            <div class="dataContainer col">
+                <!-- <div class="d-flex flex-row justify-content-between"> -->
+
+                <div d-flex flex-row justify-content-between>
+                    <div class="form-group">
+                        <h3 for="exampleInputEmail1">Enter Flag</h3>
+                        <input type="text" class="form-control" placeholder="Enter Flag"><br>
+                        <a href="#" onclick="checkFlag()" class="btn btn-primary" role="button" type="submit">Check</a>
+                    </div>
+                </div>
+                <div class="d-flex flex-column justify-content-center">
+                    <!-- <div class="checkContainer">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked disabled>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    ข้อ 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked disabled>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    ข้อ 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked disabled>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    ข้อ 3
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked disabled>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    ข้อ 4
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked disabled>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    ข้อ 5
+                                </label>
+                            </div>
+                        </div> -->
+                </div>
+
+
+
+                <!-- </div> -->
+                <div>
+                    <label id="checkText"></label>
+                </div>
+
+            </div>
+
+            <div class="card-deck cardContainer col-6">
+                <div class="card bg-light active cdtext1">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Flag 1 </h5>
+                        <h5 class="card-title">" ให้เปลี่ยน User ที่ตัวเองสมัครเป็น Role 'admin' "</h5>
+                        <small class="font-italic">Hint : ไม่มีคำใบ้</small>
+                    </div>
+                </div>
+                <div class="card bg-light cdtext">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Flag 2</h5>
+                        <h5 class="card-title">" ให้เข้าสู่ระบบด้วย Username 'admin' ให้ได้ "</h5>
+                        <small class="font-italic">Hint : Reset password</small>
+                    </div>
+                </div>
+                <div class="card bg-light cdtext">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Flag 3</h5>
+                        <h5 class="card-title">" จงหา Flag ! "</h5>
+                        <small class="font-italic">Hint : /secure_pass</small>
+                    </div>
+                </div>
+                <!-- <div class="card bg-light cdtext">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Flag 4</h5>
+                        <h5 class="card-title">" หา Flag ที่อยู่ในฐานข้อมูลส่วนของ Email ของ User "</h5>
+                        <small class="font-italic">Hint : ไม่มีคำใบ้</small>
+                    </div>
+                </div>
+                <div class="card bg-light cdtext">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Flag 5</h5>
+                        <h5 class="card-title">"  หา Flag ที่อยู่ในฐานข้อมูลส่วนของบัตรเครดิต "</h5>
+                        <small class="font-italic">Hint : ไม่มีคำใบ้</small>
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+<script>
+    function checkFlag() {
+        document.getElementById("checkText").innerHTML = "Flag 1 Correct!!!";
+    } 
+</script>
+<style>
+    .checkContainer {
+        border: 1px solid black;
+        width: 10em;
+        height: 10em;
+    }
+
+    .dataContainer {
+        margin-top: 5%;
+        margin: 5%;
+        width: 100%;
+        /* background-color: aqua; */
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .active {
+        background-color: #36cf5e !important;
+    }
+
+    .cardContainer {
+        margin-top: 5%;
+        margin: 5%;
+
+    }
+
+    .cdtext1 {
+        color: white !important;
+    }
+
+    .cdtext {
+        color: black !important;
+    }
+
+    #checkText {
+        color: #36cf5e;
+    }
+
+    @media (min-width: 576px) {
+        .card-deck .card {
+            min-width: 50.1%;
+            /* 1 Column */
+            margin-bottom: 12px;
+        }
+    }
+
+    .screenContainer {
+        background-color: white;
+    }
+
+    body {
+        /* background-color: #dcdcdc; */
+
+    }
+</style>
+
+</html>
